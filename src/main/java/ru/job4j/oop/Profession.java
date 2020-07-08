@@ -1,3 +1,4 @@
+/*
 package ru.job4j.oop;
 
 public class Profession {
@@ -7,9 +8,10 @@ public class Profession {
     private String birthday;
 
     public String getName();
-    public String getSurname()
+    public String getSurname();
     public String getEducation();
     public String getBirthday();
 
 
 }
+*/

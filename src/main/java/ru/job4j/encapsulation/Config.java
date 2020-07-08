@@ -22,4 +22,3 @@ public class Config {
         return key;
     }
 }
-<,/pre>

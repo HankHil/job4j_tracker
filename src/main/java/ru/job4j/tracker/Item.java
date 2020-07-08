@@ -1,3 +1,4 @@
+/*
 package ru.job4j.tracker;
 
 public class Item {
@@ -29,4 +30,4 @@ public class Item {
     public void setName(String name) {
         this.name = name;
     }
-}
+}*/

@@ -1,3 +1,4 @@
+/*
 package ru.job4j.oop;
 
 public class Story {
@@ -9,4 +10,4 @@ public class Story {
         wolf.eat(girl);
         petya.kill(wolf);
     }
-}
+}*/

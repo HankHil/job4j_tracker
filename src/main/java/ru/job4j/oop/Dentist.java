@@ -1,8 +1,8 @@
-package ru.job4j.oop;
+/*package ru.job4j.oop;
 
 public class Dentist extends Doctor {
     private int tooths;
 
     public void getMoney(int money) {
     }
-}
+}*/
