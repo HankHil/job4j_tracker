@@ -1,16 +1,16 @@
 package ru.job4j.pojo;
 
 public class Student {
-    private String SFS;
+    private String sfs;
     private String group;
     private String dateOfReceipt;
 
     public String getSFS() {
-        return SFS;
+        return sfs;
     }
 
     public void setSFS(String SFS) {
-        this.SFS = SFS;
+        this.sfs = SFS;
     }
 
     public String getGroup() {
