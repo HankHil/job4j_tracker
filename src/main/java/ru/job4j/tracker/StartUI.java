@@ -3,10 +3,10 @@ package ru.job4j.tracker;
 public class StartUI {
     public static void main(String[] args) {
         Tracker tracker = new Tracker();
-        Item item = new Item("a");
+        Item item = new Item();
         tracker.add(item);
         Item a = new Item();
-        a = tracker.findById();
+        a = tracker.findById(0);
         System.out.println(a);
     }
 }
