@@ -2,16 +2,44 @@ package ru.job4j.tracker;
 
 public class StartUI {
 
+    public static void createItem(Input input, Tracker tracker) {
+        System.out.println("=== Create a new Item ====");
+        String name = input.askStr("Enter name: ");
+        Item item = new Item(name);
+        tracker.add(item);
+    }
+
+    public static void replaceItem(Input input, Tracker tracker) {
+        System.out.println("=== Edit item ====");
+        int id = Integer.valueOf(input.askStr("Enter item's id: "));
+        String newName = input.askStr("Enter item's new name: ");
+        Item newItem = new Item(newName);
+        if (tracker.replace(id, newItem)) {
+            System.out.print("Done!");
+        } else {
+            System.out.print("Exeption! Wrong id!");
+        }
+    }
+
+    public static void deleteItem(Input input, Tracker tracker) {
+        System.out.println("=== Delete item ====");
+        int id = Integer.valueOf(input.askStr("Enter item's id: "));
+        if (tracker.delete(id)) {
+            System.out.print("Done!");
+        } else {
+            System.out.print("Exeption! Wrong id!");
+        }
+    }
+
+
+
     public void init(Input input, Tracker tracker) {
         boolean run = false;
         while (run) {
             this.showMenu();
             int select = Integer.valueOf(input.askStr("Select: "));
             if (select == 0) {
-                System.out.println("=== Create a new Item ====");
-                String name = input.askStr("Enter name: ");
-                Item item = new Item(name);
-                tracker.add(item);
+                StartUI.createItem(input, tracker);
             } else if (select == 1) {
                 System.out.println("=== Show all items ====");
                 Item[] all = tracker.findAll();
@@ -20,23 +48,9 @@ public class StartUI {
                     System.out.println();
                 }
             } else if (select == 2) {
-                System.out.println("=== Edit item ====");
-                int id = Integer.valueOf(input.askStr("Enter item's id: "));
-                String newName = input.askStr("Enter item's new name: ");
-                Item newItem = new Item(newName);
-                if (tracker.replace(id, newItem)) {
-                    System.out.print("Done!");
-                } else {
-                    System.out.print("Exeption! Wrong id!");
-                }
+                StartUI.replaceItem(input, tracker);
             } else if (select == 3) {
-                System.out.println("=== Delete item ====");
-                int id = Integer.valueOf(input.askStr("Enter item's id: "));
-                if (tracker.delete(id)) {
-                    System.out.print("Done!");
-                } else {
-                    System.out.print("Exeption! Wrong id!");
-                }
+                StartUI.deleteItem(input, tracker);
             } else if (select == 4) {
                 System.out.println("=== Find item by Id ====");
                 int id = Integer.valueOf(input.askStr("Enter item's id: "));
