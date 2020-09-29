@@ -1,3 +1,4 @@
+/*
 package ru.job4j.poly;
 
 public class Bus implements Transport {
@@ -16,3 +17,4 @@ public class Bus implements Transport {
         return 0;
     }
 }
+*/

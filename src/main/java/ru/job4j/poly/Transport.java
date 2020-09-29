@@ -1,4 +1,4 @@
-package ru.job4j.poly;
+/*package ru.job4j.poly;
 
 public interface Transport {
      void driving();
@@ -7,4 +7,4 @@ public interface Transport {
 
     int refuel(int fuel);
     return int cost;
-}
+}*/
